@@ -46,6 +46,7 @@ Tenim les taules producto i fabricador, cadascuna amb els següents camps:
 - fabricante (codigo, nombre)
 El camp 'codigo_fabricante' de l'entitat producto es relaciona amb el camp 'codi' de l'entitat fabricante.
 Si us plau, efectua les següents consultes:
+
 Llista el nom de tots els productes que hi ha en la taula producto.
 Llista els noms i els preus de tots els productes de la taula producto.
 Llista totes les columnes de la taula producto.
