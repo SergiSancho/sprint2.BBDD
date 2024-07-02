@@ -2,7 +2,7 @@ use pizzeria;
 
 -- Llista quants productes de categoria 'Begudes' s'han venut en una determinada localitat.
 
-SELECT SUM(lc.quantitat) AS quantitat_begudes_venudes
+SELECT SUM(lc.quantitat) AS quantitat_begudes_venudes, l.nom
 FROM linia_comanda lc
 JOIN comanda c ON lc.id_comanda = c.id_comanda
 JOIN producte p ON lc.id_producte = p.id_producte
