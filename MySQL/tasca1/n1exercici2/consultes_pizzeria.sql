@@ -14,7 +14,7 @@ AND l.nom = 'Badalona';
 
 -- Llista quantes comandes ha efectuat un determinat empleat/da.
 
-SELECT COUNT(r.id_comanda) AS quantitat_comandes_efectuades
+SELECT e.nom, e.cognom, COUNT(r.id_comanda) AS quantitat_comandes_efectuades
 FROM repartiment r
 JOIN empleat e ON r.id_empleat = e.id_empleat
 WHERE e.nom = 'Anna' AND e.cognoms = 'Perez';
