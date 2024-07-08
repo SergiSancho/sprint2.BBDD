@@ -25,9 +25,7 @@ CREATE TABLE adreca (
     numero VARCHAR(10) NOT NULL,
     codi_postal VARCHAR(10) NOT NULL,
     id_localitat INT,
-    id_provincia INT,
-    FOREIGN KEY (id_localitat) REFERENCES localitat(id_localitat) ON UPDATE CASCADE ON DELETE CASCADE,
-    FOREIGN KEY (id_provincia) REFERENCES provincia(id_provincia) ON UPDATE CASCADE ON DELETE CASCADE
+    FOREIGN KEY (id_localitat) REFERENCES localitat(id_localitat) ON UPDATE CASCADE ON DELETE CASCADE
 ) ENGINE=InnoDB;
 
 CREATE TABLE client (
@@ -118,13 +116,13 @@ INSERT INTO localitat (nom, id_provincia) VALUES
 ('Lleida', 3),
 ('Tarragona', 4);
 
-INSERT INTO adreca (carrer, numero, codi_postal, id_localitat, id_provincia) VALUES
-('Carrer Major', '1', '08001', 1, 1),
-('Avinguda Diagonal', '100', '08029', 1, 1),
-('Rambla de Badalona', '50', '08911', 2, 1),
-('Carrer del Nord', '10', '17001', 3, 2),
-('Carrer de la Ciutat', '25', '25001', 4, 3),
-('Plaça de la Font', '5', '43001', 5, 4);
+INSERT INTO adreca (carrer, numero, codi_postal, id_localitat) VALUES
+('Carrer Major', '1', '08001', 1),
+('Avinguda Diagonal', '100', '08029', 1),
+('Rambla de Badalona', '50', '08911', 2),
+('Carrer del Nord', '10', '17001', 3),
+('Carrer de la Ciutat', '25', '25001', 4),
+('Plaça de la Font', '5', '43001', 5);
 
 INSERT INTO client (nom, cognoms, id_adreca, telefon) VALUES
 ('Maria', 'Garcia', 1, '612345678'),
